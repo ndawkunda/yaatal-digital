@@ -1,15 +1,24 @@
+@use '../utilities/colors' as *;
 @use '../utilities/sizing' as *;
+@use '../utilities/typo' as *;
 
 .topbar {
   display: flex;
   justify-content: space-between;
   padding: $size-4;
 
-  nav>ul {
-    display: flex;
+  .logo {
+    font-size: $fs-6;
+    font-weight: $fw-3;
   }
 
-  li {
-    padding-left: $size-2;
+  .main-menu {
+    
+  }
+
+  .link {
+    // padding-left: $size-2;
+    font-weight: $fw-2;
+    color: $primary-700;
   }
 }

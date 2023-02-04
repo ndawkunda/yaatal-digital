@@ -5,18 +5,18 @@ const Menu = () => {
     <>
       <div className='topbar'>
         <h1 className='logo'>LOGO</h1>
-        <nav className='main-menu'>
-          <ul>
-            <li>
+        <nav>
+          <ul className='main-menu'>
+            <li className='link'>
               <Link to='/'>Accueil</Link>
             </li>
-            <li>
+            <li className='link'>
               <Link to='/services'>Services</Link>
             </li>
-            <li>
+            <li className='link'>
               <Link to='/a-propos'>A propos</Link>
             </li>
-            <li>
+            <li className='link'>
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
