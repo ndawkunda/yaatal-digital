@@ -26,7 +26,7 @@ const Home = () => {
       <div className='services'>
         <div className='text-container'>
           <h3 className='subtitle subtitle-1'>
-            Nous vous aidons à{' '}
+            Nous vous aidons à
             <span>
               <FaThinkPeaks />
               <FaThinkPeaks />

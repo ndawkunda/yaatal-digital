@@ -14,7 +14,7 @@
     justify-content: space-between;
     padding: 0 $size-5;
     position: relative;
-    z-index: 9;
+    z-index: 99;
   }
 
   .logo {
@@ -32,6 +32,7 @@
     position: relative;
     transform: translateY(-100%);
     transition: transform ease 1s;
+    z-index: 9;
   }
   
   .main-menu.menu-open {
