@@ -13,11 +13,13 @@ const Menu = () => {
       <nav className='header'>
         <div className='topbar'>
           <h1 className='logo'>LOGO</h1>
-          {menuOpen ? (
-            <FaTimes onClick={menuToggle} />
-          ) : (
-            <FaBars onClick={menuToggle} />
-          )}
+          <div className='menu-btn'>
+            {menuOpen ? (
+              <FaTimes onClick={menuToggle} />
+            ) : (
+              <FaBars onClick={menuToggle} />
+            )}
+          </div>
         </div>
 
         <ul className={menuOpen ? 'main-menu menu-open' : 'main-menu'}>

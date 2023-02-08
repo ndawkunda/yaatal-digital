@@ -1,0 +1,16 @@
+@use '../utilities/typo' as *;
+@use '../utilities/sizing' as *;
+
+.btn {
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  gap: $size-4;
+  padding: $size-2 $size-5;
+  margin-bottom: $size-2;
+}
+
+.rounded-btn {
+  border: $size-1 solid;
+  border-radius: $size-5;
+}

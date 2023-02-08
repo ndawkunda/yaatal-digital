@@ -1,0 +1,33 @@
+@use '../utilities/typo' as *;
+@use '../utilities/sizing' as *;
+
+// Titles
+
+.title {
+  letter-spacing: .05em;
+  margin-bottom: $size-3;
+}
+
+.title-1 {
+  font-size: $fs-8;
+  font-weight: $fw-4;
+}
+
+.title-2 {
+  font-size: $fs-6;
+  font-weight: $fw-4;
+}
+
+
+// Subtitles
+
+.subtitle {
+  margin-bottom: $size-2;
+
+}
+
+.subtitle-1 {
+  letter-spacing: .05em;
+  font-weight: $fw-1;
+  text-transform: uppercase;
+}

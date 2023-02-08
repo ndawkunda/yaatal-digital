@@ -1,1 +1,16 @@
-@use './index'
+@use '../base/reset';
+@use '../components/menu';
+@use '../utilities/colors' as *;
+@use '../utilities/sizing' as *;
+@use '../utilities/typo' as *;
+
+body {
+  font-family: $ff-1;
+  color: $primary-900;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  top: $size-7;
+}
