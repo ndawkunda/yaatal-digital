@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Menu from './components/Menu'
+import Footer from './components/Footer'
 import Home from './Home'
 import Services from './Services'
 import About from './About'
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }

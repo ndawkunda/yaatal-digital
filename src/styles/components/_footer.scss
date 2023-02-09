@@ -1,0 +1,36 @@
+@use '../utilities/colors' as *;
+@use '../utilities/sizing' as *;
+@use '../utilities/typo' as *;
+@use '../components/buttons';
+
+.footer {
+  align-items: center;
+  background-color: $primary-700;
+  color: $primary-50;
+  display: flex;
+  flex-direction: column;
+  padding: $size-6 $size-2;
+
+  .company {
+    font-weight: $fw-3;
+    letter-spacing: .05em;
+  }
+
+  .copy {
+    font-weight: $fw-1;
+    font-size: $fs-2;
+  }
+
+  .menu {
+    display: flex;
+    gap: $size-3;
+    margin-top: $size-5;
+  }
+
+  .link {
+    @extend .btn;
+    font-size: $fs-2;
+    margin: 0;
+    padding: 0;
+  }
+}

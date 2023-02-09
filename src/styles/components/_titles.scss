@@ -9,11 +9,13 @@
 }
 
 .title-1 {
+  @extend .title;
   font-size: $fs-8;
   font-weight: $fw-4;
 }
 
 .title-2 {
+  @extend .title;
   font-size: $fs-6;
   font-weight: $fw-4;
 }
@@ -23,10 +25,10 @@
 
 .subtitle {
   margin-bottom: $size-2;
-
 }
 
 .subtitle-1 {
+  @extend .subtitle;
   letter-spacing: .05em;
   font-weight: $fw-1;
   text-transform: uppercase;

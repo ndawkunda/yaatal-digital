@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import {
+  FaPhone,
   FaThinkPeaks,
   FaLongArrowAltRight,
   FaConnectdevelop,
@@ -12,20 +13,21 @@ const Home = () => {
       <div className='landing'>
         <img src='/img/img.png' alt='landing background' className='bg' />
         <div className='text-container'>
-          <h1 className='title title-1'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
-          </h1>
+          <h1 className='title title-1'>SEN SOLUTION DIGITALE</h1>
           <p className='desc'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-            aliquid saepe dolorem voluptatem eaque reiciendis enim labore, illo
-            magni animi suscipit quaerat.
+            Nous vous accompagnons pour la création de votre site internet et le
+            référencement naturel (SEO). Nous pouvons également prendre en
+            charge la création de votre identité visuelle.
           </p>
+          <Link to='/services' className='rounded-plain-btn cta'>
+            Nous contacter <FaPhone />
+          </Link>
         </div>
       </div>
 
       <div className='services'>
         <div className='text-container'>
-          <h3 className='subtitle subtitle-1'>
+          <h3 className='subtitle-1'>
             Nous vous aidons à
             <span>
               <FaThinkPeaks />
@@ -33,17 +35,15 @@ const Home = () => {
               <FaThinkPeaks />
             </span>
           </h3>
-          <h1 className='title title-2'>Concevoir de meilleurs solutions</h1>
-          <Link to='/services' className='btn rounded-btn'>
+          <h1 className='title-2'>Concevoir de meilleurs solutions</h1>
+          <Link to='/contact' className='btn rounded-btn'>
             Nos services <FaLongArrowAltRight />
           </Link>
         </div>
 
         <div className='cards-container'>
           <div className='card'>
-            <div className='icon'>
-              <FaConnectdevelop />
-            </div>
+            <FaConnectdevelop className='icon' />
             <div className='text'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
               necessitatibus. Sunt soluta et, at perferendis placeat aliquid
@@ -52,9 +52,7 @@ const Home = () => {
             </div>
           </div>
           <div className='card'>
-            <div className='icon'>
-              <FaConnectdevelop />
-            </div>
+            <FaConnectdevelop className='icon' />
             <div className='text'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium nobis perferendis repellat. Quod consequuntur eaque
@@ -64,9 +62,7 @@ const Home = () => {
             </div>
           </div>
           <div className='card'>
-            <div className='icon'>
-              <FaConnectdevelop />
-            </div>
+            <FaConnectdevelop className='icon' />
             <div className='text'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consectetur corporis quaerat odio, minus earum blanditiis
@@ -81,9 +77,40 @@ const Home = () => {
               laborum accusamus cupiditate rem eligendi autem cum similique eius
               illo, voluptas dolor dolorum!
             </div>
-            <Link to='/services' className='btn nude-btn'>
+            <Link to='/services' className='btn'>
               En savoir plus <FaLongArrowAltRight />
             </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className='method'>
+        <div className='block left'>
+            <img src='/img/img.png' alt='' />
+          <div className='text-container'>
+            <h3 className='title-2'>
+              Nous designons des solutions qui améliorent le quotidien
+            </h3>
+            <p className='desc'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              dolor voluptate repellendus unde tempore animi totam natus. Quo,
+              facilis amet ad nulla, totam ratione, laborum voluptatibus
+              repellendus ea porro excepturi?
+            </p>
+          </div>
+        </div>
+        <div className='block right'>
+            <img src='/img/img.png' alt='' />
+          <div className='text-container'>
+            <h3 className='title-2'>
+              Nous dévelopons des solutions adaptées à vos besoins
+            </h3>
+            <p className='desc'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              dolor voluptate repellendus unde tempore animi totam natus. Quo,
+              facilis amet ad nulla, totam ratione, laborum voluptatibus
+              repellendus ea porro excepturi?
+            </p>
           </div>
         </div>
       </div>
