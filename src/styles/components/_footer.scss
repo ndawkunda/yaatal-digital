@@ -1,3 +1,4 @@
+@use '../utilities/breakpoints' as *;
 @use '../utilities/colors' as *;
 @use '../utilities/sizing' as *;
 @use '../utilities/typo' as *;
@@ -33,4 +34,20 @@
     margin: 0;
     padding: 0;
   }
+
+}
+
+@media (min-width: $md) {
+
+  .footer {
+
+    .company {
+      font-size: $fs-4;
+    }
+
+    .copy, .link {
+      font-size: $fs-3;
+    }
+  }
+
 }

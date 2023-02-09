@@ -1,6 +1,7 @@
 @use '../base/reset';
 @use '../components/menu';
 @use '../components/footer';
+@use '../utilities/breakpoints' as *;
 @use '../utilities/colors' as *;
 @use '../utilities/sizing' as *;
 @use '../utilities/typo' as *;
@@ -14,4 +15,11 @@ body {
 .container {
   position: relative;
   top: $size-7;
+}
+
+@media (min-width: $lg) {
+  
+  .container {
+    position: unset;
+  }
 }

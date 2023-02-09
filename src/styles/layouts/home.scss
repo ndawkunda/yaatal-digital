@@ -1,3 +1,4 @@
+@use '../utilities/breakpoints' as *;
 @use '../utilities/colors' as *;
 @use '../utilities/sizing' as *;
 @use '../utilities/typo' as *;
@@ -53,6 +54,11 @@
     gap: $size-4;
   }
 
+  .cards-container {
+    display: grid;
+    gap: $size-4
+  }
+
   .card {
     background-color: $primary-500;
 
@@ -98,11 +104,7 @@
       align-self: flex-end;
     }
     
-    .title-2 {
-      text-align: right;
-    }
-
-    .desc {
+    .title-2, .desc {
       text-align: right;
     }
 
@@ -113,6 +115,99 @@
     img {
       align-self: flex-end;
       border-radius: $size-3 0 0 $size-3;
+    }
+
+  }
+}
+
+@media (min-width: $md) {
+
+  .landing {
+
+    .text-container {
+      padding: $size-10;
+    }
+  }
+
+  .services {
+
+    .cards-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .method {
+
+    .block {
+
+      img, .text-container {
+        width: 70%;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $lg) {
+
+  .landing {
+
+    .bg {
+      width: 60%;
+      right: 0;
+    }
+
+    .text-container {
+      padding: $size-5;
+      width: 40%;
+    }
+  }
+
+  .services {
+    display: grid;
+    gap: $size-2;
+    grid-template-columns: 4fr 8fr;
+    padding: $size-8;
+
+    .text-container {
+      padding-top: $size-8;
+      padding-right: $size-8;
+    }
+  }
+
+  .method {
+    .block {
+      flex-direction: row;
+
+      img {
+        height: $size-14;
+        width: 50%;
+      }
+    }
+
+    .left {
+      
+      .text-container {
+        align-self: center;
+      }
+
+      .title-2, .desc {
+        text-align: left;
+      }
+    }
+
+    .right {
+      flex-direction: row-reverse;
+
+      .text-container {
+        align-self: center;
+      }
+
+      .title-2, .desc {
+        text-align: right;
+      }
     }
 
   }

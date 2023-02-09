@@ -1,3 +1,4 @@
+@use '../utilities/breakpoints' as *;
 @use '../utilities/colors' as *;
 @use '../utilities/sizing' as *;
 @use '../utilities/typo' as *;
@@ -22,9 +23,6 @@
     font-weight: $fw-3;
   }
 
-  // .menu-btn {
-  // }
-
   .main-menu {
     background-color: $primary-50;
     text-align: center;
@@ -40,7 +38,7 @@
   }
 
   .link {
-    font-weight: $fw-2;
+    font-weight: $fw-3;
     padding-top: $size-5;
     
     &>a {
@@ -52,5 +50,44 @@
       color: $primary-500;
     }
   }
+
+}
+
+@media (min-width: $lg) {
+
+  .header {
+    align-items: center;
+    background-color: $primary-100;
+    display: flex;
+    justify-content: space-between;
+    padding: $size-4 $size-6;
+    position: unset;
+
+    .topbar {
+      background-color: transparent;
+      display: block;
+      height: auto;
+      padding: 0;
+      position: unset;
+    }
+    
+    .menu-btn {
+      display: none;
+    }
+
+    .main-menu {
+      background-color: transparent;
+      display: flex;
+      gap: $size-5;
+      transform: translate(0);
+      padding: 0;
+      position: unset;
+    }
+
+    .link {
+      padding: 0;
+    }
+  }
+
 
 }
