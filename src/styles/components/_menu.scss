@@ -15,7 +15,7 @@
     justify-content: space-between;
     padding: 0 $size-5;
     position: relative;
-    z-index: 99;
+    z-index: 9999;
   }
 
   .logo {
@@ -30,7 +30,7 @@
     position: relative;
     transform: translateY(-100%);
     transition: transform ease 1s;
-    z-index: 9;
+    z-index: 999;
   }
   
   .main-menu.menu-open {
@@ -47,7 +47,7 @@
     }
 
     &>a:hover {
-      color: $primary-500;
+      color: $cyan-600;
     }
   }
 

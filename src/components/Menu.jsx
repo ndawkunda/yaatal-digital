@@ -24,16 +24,24 @@ const Menu = () => {
 
         <ul className={menuOpen ? 'main-menu menu-open' : 'main-menu'}>
           <li className='link'>
-            <Link to='/'>Accueil</Link>
+            <Link to='/' onClick={menuToggle}>
+              Accueil
+            </Link>
           </li>
           <li className='link'>
-            <Link to='/services'>Services</Link>
+            <Link to='/services' onClick={menuToggle}>
+              Services
+            </Link>
           </li>
           <li className='link'>
-            <Link to='/a-propos'>A propos</Link>
+            <Link to='/a-propos' onClick={menuToggle}>
+              A propos
+            </Link>
           </li>
           <li className='link'>
-            <Link to='/contact'>Contact</Link>
+            <Link to='/contact' onClick={menuToggle}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

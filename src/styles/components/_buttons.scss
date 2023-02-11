@@ -15,6 +15,7 @@
 
   &:hover {
     color: $primary-200;
+    cursor: pointer;
   }
 }
 
@@ -35,5 +36,6 @@
 .rounded-plain-btn {
   @extend .rounded-btn;
   background-color: $primary-900;
+  border-color: $primary-900;
   color: $primary-50;
 }

@@ -1,0 +1,98 @@
+@use '../utilities/breakpoints' as *;
+@use '../utilities/colors' as *;
+@use '../utilities/sizing' as *;
+@use '../utilities/typo' as *;
+@use '../components/titles';
+@use '../components/buttons';
+
+.contact {
+  position: relative;
+  background-color: $primary-900;
+  margin-bottom: $size-7;
+  
+  .bg {
+    height: calc(100vh - $size-7);
+    object-fit: cover;
+    opacity: .3;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: $size-6;
+    justify-content: center;
+    height: calc(100vh - $size-7);
+    padding: $size-2 $size-7;
+    position: relative;
+    text-align: center;
+    z-index: 99;
+
+    input, textarea {
+      border-radius: $size-4;
+      padding: $size-3 $size-4;
+      font-size: $fs-3;
+      font-family: $ff-1;
+      border-color: transparent;
+
+      &:focus {
+        outline: $size-1 solid $yellow-400;
+      }
+    }
+
+    input {
+      font-style: italic;
+    }
+
+    #submit {
+      background-color: $yellow-600;
+      border-color: $yellow-600;
+      color: $yellow-50;
+      font-size: $fs-3;
+
+      &:hover {
+        background-color: $yellow-100;
+        border-color: $yellow-100;
+        color: $yellow-900
+      }
+    }
+
+    .title-2 {
+      align-items: center;
+      color: $primary-50;
+      display: flex;
+      gap: $size-4;
+      justify-content: center;
+      position: relative;
+      z-index: 99;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: $size-5;
+    }
+  }
+}
+
+@media (min-width: $lg) {
+
+  .contact {
+    margin-bottom: 0;
+    display: flex;
+
+    .bg {
+      opacity: .75;
+      right: 0;
+      width: 40%;
+    }
+    
+    .text-container {
+      padding: $size-5 $size-8;
+      width: 60%;
+    }
+  }
+
+}
