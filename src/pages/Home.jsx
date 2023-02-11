@@ -86,7 +86,7 @@ const Home = () => {
 
       <div className='method'>
         <div className='block left'>
-          <img src='/img/method_1.jpg' alt='' />
+          <img src='/img/method-1.jpg' alt='' />
           <div className='text-container'>
             <h3 className='title-2'>
               Nous designons des solutions qui améliorent le quotidien
@@ -100,7 +100,7 @@ const Home = () => {
           </div>
         </div>
         <div className='block right'>
-          <img src='/img/method_2.jpg' alt='' />
+          <img src='/img/method-2.jpg' alt='' />
           <div className='text-container'>
             <h3 className='title-2'>
               Nous dévelopons des solutions adaptées à vos besoins
