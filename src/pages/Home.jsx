@@ -5,13 +5,13 @@ import {
   FaLongArrowAltRight,
   FaConnectdevelop,
 } from 'react-icons/fa'
-import './styles/layouts/home.scss'
+import '../styles/layouts/home.scss'
 
 const Home = () => {
   return (
     <>
       <div className='landing'>
-        <img src='/img/img.png' alt='landing background' className='bg' />
+        <img src='/img/landing.jpg' alt='landing background' className='bg' />
         <div className='text-container'>
           <h1 className='title title-1'>SEN SOLUTION DIGITALE</h1>
           <p className='desc'>
@@ -36,7 +36,7 @@ const Home = () => {
             </span>
           </h3>
           <h1 className='title-2'>Concevoir de meilleurs solutions</h1>
-          <Link to='/contact' className='btn rounded-btn'>
+          <Link to='/contact' className='cta rounded-btn'>
             Nos services <FaLongArrowAltRight />
           </Link>
         </div>
@@ -86,7 +86,7 @@ const Home = () => {
 
       <div className='method'>
         <div className='block left'>
-            <img src='/img/img.png' alt='' />
+          <img src='/img/method-1.jpg' alt='' />
           <div className='text-container'>
             <h3 className='title-2'>
               Nous designons des solutions qui améliorent le quotidien
@@ -100,7 +100,7 @@ const Home = () => {
           </div>
         </div>
         <div className='block right'>
-            <img src='/img/img.png' alt='' />
+          <img src='/img/method-2.jpg' alt='' />
           <div className='text-container'>
             <h3 className='title-2'>
               Nous dévelopons des solutions adaptées à vos besoins

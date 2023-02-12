@@ -12,7 +12,8 @@
   .bg {
     height: calc(100vh - $size-7);
     object-fit: cover;
-    opacity: .4;
+    object-position: left;
+    opacity: .3;
     position: absolute;
     width: 100%;
     z-index: -1;
@@ -35,6 +36,15 @@
 
   .cta {
     align-self: center;
+    background-color: $yellow-600;
+    border-color: $yellow-600;
+    color: $yellow-50;
+    
+    &:hover {
+      background-color: $yellow-100;
+      border-color: $yellow-100;
+      color: $yellow-900
+    }
   }
 
 }
@@ -54,16 +64,33 @@
     gap: $size-4;
   }
 
+  .cta {
+    border-color: $cyan-300;
+    color: $cyan-300;
+    margin-top: $size-6;
+
+    &:hover {
+      background-color: $cyan-200;
+      border-color: $cyan-200;
+    }
+  }
+
   .cards-container {
     display: grid;
     gap: $size-4
   }
 
   .card {
-    background-color: $primary-500;
+    background-color: $cyan-200;
+    color: $primary-900;
 
     .btn {
+      color: $yellow-700;
       margin-bottom: 0;
+
+      &:hover {
+        color: $yellow-500;
+      }
     }
   }
 
@@ -81,6 +108,7 @@
     margin-bottom: $size-5;
 
     img {
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
       height: $size-13;
       margin-bottom: $size-5;
       object-fit: cover;
@@ -155,8 +183,9 @@
   .landing {
 
     .bg {
-      width: 60%;
+      opacity: .75;
       right: 0;
+      width: 60%;
     }
 
     .text-container {
@@ -172,18 +201,28 @@
     padding: $size-8;
 
     .text-container {
+      gap: $size-5;
       padding-top: $size-8;
       padding-right: $size-8;
     }
+
+    .cta {
+      margin-top: $size-7;
+    }
+
   }
 
   .method {
     .block {
       flex-direction: row;
-
+      
       img {
         height: $size-14;
         width: 50%;
+      }
+      
+      .text-container {
+        padding: $size-9;
       }
     }
 

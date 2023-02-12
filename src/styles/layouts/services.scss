@@ -1,0 +1,158 @@
+@use '../utilities/sizing' as *;
+@use '../utilities/colors' as *;
+@use '../utilities/_typo' as *;
+
+
+
+.headService{
+    background-image:  url("../images/imageService_first.jpg");
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: $fs-7;
+        font-weight: $fw-2;
+        color: $primary-50;
+    }
+}
+
+.grid{
+    max-width: auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    /* border: 1px solid #333; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $size-13);
+    justify-content: center;
+    grid-gap: $size-4;
+
+    .cards{
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+    .wrap{
+        padding: 10%;
+    }
+    h3{
+        font-size: $fs-7;
+        padding: 0 5% 5% 0;
+    }
+    .textCard{
+        font-size: $fs-5;
+    }
+    button{
+        margin: 10% 0;
+        cursor: pointer;
+        width: $size-10;
+        height: $size-7;
+    }
+    .CM{
+        background-image: url(../images/imageCM.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        
+    }
+}
+
+
+.otherService {
+    margin: $size-10;
+
+     h2 {
+    text-align: center;
+    font-size: $fs-7;
+    }
+
+    .line{
+        display: flex;
+        justify-content: center;
+        margin: $size-4 0 $size-7 0;
+    }
+
+    .line span {
+        width: $size-10;
+        background-color: $primary-900;
+        height: $size-1;
+        display: block;
+        text-align: center;
+        border-radius: 30%;
+    }
+    .grid{
+        max-width: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        /* border: 1px solid #333; */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, $size-12a);
+        justify-content: center;
+        grid-gap: $size-7;
+    }
+    .otherServices{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: $primary-100;
+        padding: 10%;
+        width: $size-12a;
+    }
+    .otherServices p{
+        text-align: center;
+    }
+    h4{
+        font-size: $fs-6;
+        margin-bottom: $size-4 ;
+        font-weight: $fw-3;
+    }
+    button{
+        cursor: pointer;
+        width: $size-10;
+        height: $size-7;
+    }
+
+}
+
+.detailServices{
+    .detailsCM{
+        background-color: $primary-900;
+        padding: 5% 0;
+        color: $primary-50;
+    }
+    .detailsRI{
+        background-color: $primary-500;
+        padding: 5% 0;
+        color: $primary-50;
+    }
+    .detailsPR{
+        background-color: $primary-50;
+        padding: 5% 0;
+        color: $primary-900;
+    }
+    .CM{
+        max-width: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        /* border: 1px solid #333; */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, $size-14a);
+        justify-content: center;
+        grid-gap: $size-1;
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-size: $fs-1;
+                padding: 5%;
+            }
+        }
+    }
+
+}
+
+

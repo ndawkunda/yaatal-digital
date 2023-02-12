@@ -1,6 +1,6 @@
-import './styles/layouts/services.scss';
-import './styles/components/_buttons.scss';
-import picture from "./styles/images/randomImage.png";
+import '../styles/layouts/services.scss';
+import '../styles/components/_buttons.scss';
+import picture from "../styles/images/randomImage.png";
 
 
 const Services = () => {
@@ -168,4 +168,5 @@ const Services = () => {
 }
 
 export default Services
+
 
