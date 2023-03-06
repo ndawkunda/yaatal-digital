@@ -1,19 +1,42 @@
 @use '../utilities/sizing' as *;
 @use '../utilities/colors' as *;
 @use '../utilities/_typo' as *;
+@use '../utilities/breakpoints' as *;
 
 
 
 .headService{
-    background-image:  url("../images/imageService_first.jpg");
+/*     background-image:  url("../images/business-5475661_960_720.jpg");
+    background-position: left;
+    opacity: .5;
+    background-size: cover;
     height: 40vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    position: relative;
+
+    img{
+        height: calc(100vh - $size-12);
+        object-fit: cover;
+        object-position: left;
+        opacity: .3;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+    
     h1{
-        font-size: $fs-7;
-        font-weight: $fw-2;
-        color: $primary-50;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - $size-12);
+        justify-content: center;
+        padding: $size-5;
+        text-align: center;
+        z-index: 1;
+        color: $primary-900;
+        font-size: $fs-8;
+        font-weight: $fw-3;
     }
 }
 
@@ -26,7 +49,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, $size-13);
     justify-content: center;
-    grid-gap: $size-4;
+    grid-gap: 0;
 
     .cards{
         height: auto;
@@ -39,9 +62,10 @@
     h3{
         font-size: $fs-7;
         padding: 0 5% 5% 0;
+        font-weight: $fw-3;
     }
     .textCard{
-        font-size: $fs-5;
+        font-size: $fs-4;
     }
     button{
         margin: 10% 0;
@@ -49,22 +73,41 @@
         width: $size-10;
         height: $size-7;
     }
-    .CM{
-        background-image: url(../images/imageCM.jpg);
+    .detail{
+/*         background-image: url(../images/imageCM.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: top;
-        
+        background-position: top; */
+       background-color: $primary-900; 
+       color: $primary-50;
+    }
+    .CM{
+        background-color: $primary-900;
+        color: $primary-50;
+    }
+    .RI{
+        background-color: $primary-500;
+        color: $primary-50;
+    }
+    .PR{
+        background-color: $primary-50;
+        color: $primary-900;
     }
 }
 
 
 .otherService {
     margin: $size-10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
      h2 {
     text-align: center;
     font-size: $fs-7;
+    width: $size-12;
+    font-weight: $fw-3;
+
     }
 
     .line{
@@ -99,6 +142,7 @@
         background-color: $primary-100;
         padding: 10%;
         width: $size-12a;
+        border-radius: $size-2;
     }
     .otherServices p{
         text-align: center;
@@ -107,6 +151,7 @@
         font-size: $fs-6;
         margin-bottom: $size-4 ;
         font-weight: $fw-3;
+        text-align: center;
     }
     button{
         cursor: pointer;
@@ -117,6 +162,7 @@
 }
 
 .detailServices{
+    margin-bottom: 10%;
     .detailsCM{
         background-color: $primary-900;
         padding: 5% 0;
@@ -132,27 +178,66 @@
         padding: 5% 0;
         color: $primary-900;
     }
-    .CM{
-        max-width: auto;
-        width: 100%;
-        height: auto;
-        margin: auto;
-        /* border: 1px solid #333; */
-        display: grid;
-        grid-template-columns: repeat(auto-fill, $size-14a);
+    .detail{
+      max-width: 100%;   
+    }
+    .images{
+        display: flex;
         justify-content: center;
-        grid-gap: $size-1;
-        .text{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            p{
-                font-size: $fs-1;
-                padding: 5%;
-            }
+
+        img{
+            max-width: $size-13;
+        }
+    }
+    .text{
+        p{
+            font-size: $fs-1;
+            padding: 5%;
+            text-align: center;
         }
     }
 
 }
 
 
+@media (min-width: $md) and (min-width: $xl){
+    .cardServices.grid{
+        display: flex;
+    }
+
+    .detailsCM{
+        display: flex;
+
+        
+    }
+    .detailsRI{
+        display: flex;
+
+    }
+    .detailsPR{
+        display: flex;
+
+    }
+}
+
+
+/* .detail{
+    max-width: auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    /* border: 1px solid #333;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $size-14a);
+    justify-content: center;
+    grid-gap: $size-1;
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: $fs-1;
+            padding: 5%;
+        }
+    }
+} */
