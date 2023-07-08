@@ -1,8 +1,6 @@
-@use '../utilities/breakpoints' as *;
-@use '../utilities/colors' as *;
-@use '../utilities/sizing' as *;
-@use '../utilities/typo' as *;
-@use '../components/buttons';
+@import '../styles/variables';
+@import '../styles/components';
+
 
 .footer {
   align-items: center;

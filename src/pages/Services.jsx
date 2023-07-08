@@ -1,174 +1,133 @@
-import '../styles/layouts/services.scss';
-import '../styles/components/_buttons.scss';
-import picture from "../styles/images/randomImage.png";
-import serviceImage from "../styles/images/business-5475661_960_720.jpg";
+import { Link } from 'react-router-dom'
+import {
+	FaEye,
+	FaThinkPeaks,
+	FaLongArrowAltRight,
+	FaConnectdevelop,
+} from 'react-icons/fa'
+
+import { images } from '../constants'
+import './services.scss'
 
 
 const Services = () => {
+	return (
+		<div id='services'>
+			<div className='header'>
+				<img src={images.services} alt='header background' className='bg' />
+				<div className='text-container'>
+					<h1 className='title-2'>Concevoir de meilleurs solutions</h1>
+					<p className='desc'>
+						Nous vous proposons des services premium, à des prix défiant toutes
+						concurences.
+					</p>
+					<a href='#main-services' className='rounded-plain-btn cta'>
+						Découvrir nos services <FaEye />
+					</a>
+				</div>
+			</div>
 
+			<div className='main-services' id='main-services'>
+				<div className='cards-container'>
+					<div className='card'>
+						<FaConnectdevelop className='icon' />
+						<div className='text'>
+							<h2 className='title-2'>Transformation Digitale</h2>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+							necessitatibus. Sunt soluta et, at perferendis placeat aliquid
+							totam iste corrupti qui praesentium eveniet, nisi error itaque,
+							provident accusantium rerum saepe?
+						</div>
+					</div>
+					<div className='card'>
+						<FaConnectdevelop className='icon' />
+						<div className='text'>
+							<h2 className='title-2'>Community Management</h2>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+							Accusantium nobis perferendis repellat. Quod consequuntur eaque
+							explicabo dignissimos reprehenderit ex, numquam molestias
+							laudantium ducimus recusandae, similique quas voluptate
+							consequatur, nulla laboriosam?
+						</div>
+					</div>
+					<div className='card'>
+						<FaConnectdevelop className='icon' />
+						<div className='text'>
+							<h2 className='title-2'>IT Support</h2>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consectetur corporis quaerat odio, minus earum blanditiis
+							voluptates suscipit placeat repudiandae quod nihil quo molestiae!
+							Pariatur ratione eos, modi accusamus voluptas vel!
+						</div>
+					</div>
+				</div>
+			</div>
 
-  return( 
-    <>
-      <div className="headService">
-        <img src={serviceImage} alt="service's image" />
-        <h1 >Nos Services</h1>
-      </div>
-      <section className="cardServices grid">
-        <div className="cards CM">
-          <div className="wrap">
-              <h3>Community Management</h3>
-              <p className="textCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam omnis nostrum quod. Qui est illo quaerat? Ipsum minus doloremque quisquam libero sint nesciunt facilis totam!</p>
-              <div className="buttonCard">
-                <button className='rounded-plain-btn'> <a href="#detailsCM">En savoir +</a> </button>
-              </div>
-          </div>
-        </div>
-        <div className="cards RI">
-          <div className="wrap">
-            <h3>Relations Influenceurs</h3>
-            <p className="textCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam omnis nostrum quod. Qui est illo quaerat? Ipsum minus doloremque quisquam libero sint nesciunt facilis totam!</p>
-            <div className="buttonCard">
-              <button className='rounded-plain-btn'><a href="#detailsRI">En savoir +</a></button>
-            </div>
-          </div>
-        </div>
-        <div className="cards PR">
-          <div className="wrap">
-            <h3>Publicités et référencement</h3>
-            <p className="textCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam omnis nostrum quod. Qui est illo quaerat? Ipsum minus doloremque quisquam libero sint nesciunt facilis totam!</p>
-            <div className="buttonCard">
-              <button className='rounded-plain-btn' ><a href="#detailsPR">En savoir +</a></button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="otherService">
-        <h2>Autres services</h2>
-        <span className='line'><span></span></span>
-        <div className="otherServicesContainer grid">
-          <div className="otherServices data">
-            <h4>Data Science</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dolor, necessitatibus officiis minima totam expedita, facere fugit, neque impedit assumenda reprehenderit maxime iste tempore cum.</p>
-            <button className='rounded-plain-btn' >En savoir +</button>
-          </div>
-          <div className="otherServices video">
-            <h4>Montage video & son</h4> 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dolor, necessitatibus officiis minima totam expedita, facere fugit, neque impedit assumenda reprehenderit maxime iste tempore cum.</p>
-            <button className='rounded-plain-btn' >En savoir +</button>
-          </div>
-          <div className="otherServices design">
-            <h4>Design</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dolor, necessitatibus officiis minima totam expedita, facere fugit, neque impedit assumenda reprehenderit maxime iste tempore cum.</p>
-            <button className='rounded-plain-btn' >En savoir +</button>
-          </div>
-          <div className="otherServices data">
-            <h4>Branding</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dolor, necessitatibus officiis minima totam expedita, facere fugit, neque impedit assumenda reprehenderit maxime iste tempore cum.</p>
-            <button className='rounded-plain-btn' >En savoir +</button>
-          </div>
-          <div className="otherServices video">
-            <h4>Analyse de Performance</h4> 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dolor, necessitatibus officiis minima totam expedita, facere fugit, neque impedit assumenda reprehenderit maxime iste tempore cum.</p>
-            <button className='rounded-plain-btn' >En savoir +</button>
-          </div>
-          <div className="otherServices design">
-            <h4>Social Ads</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis dolor, necessitatibus officiis minima totam expedita, facere fugit, neque impedit assumenda reprehenderit maxime iste tempore cum.</p>
-            <button className='rounded-plain-btn' >En savoir +</button>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="detailServices">
-          <a name="detailsCM"></a>
-        <div className="detailsCM">
-          <div className="detail">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-          <div className="detail middle">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-          <div className="detail">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-        </div>
-        <a name="detailsRI"></a>
-        <div className="detailsRI">
-          <div className="detail">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-          <div className="detail detailRI middle">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-          <div className="detail">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-        </div>
-        <a name="detailsPR"></a>
-        <div className="detailsPR">
-          <div className="detail">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-          <div className="detail middle">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-          <div className="detail">
-            <div className="images">
-              <img src={picture} alt="randomImage" />
-            </div>
-            <div className="text">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, assumenda dolorum sint sequi dignissimos nam iusto molestiae vitae odio laborum. Ducimus quibusdam, velit voluptas impedit aperiam deserunt rerum quisquam. Tempore deleniti, odio omnis dignissimos quae explicabo, aperiam, illo molestiae voluptatem porro vitae minima suscipit asperiores. Minus asperiores minima dicta quo.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  )
+			<div className='other-services'>
+				<div className='text-container'>
+					<h1 className='title-2'>En encore plus de services...</h1>
+				</div>
+				<div className='cards-container'>
+					<div className='card'>
+						<div className='text'>
+							<h2 className='title-2'>Business Plan</h2>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+							necessitatibus. Sunt soluta et, at perferendis placeat aliquid
+							totam iste corrupti qui praesentium eveniet, nisi error itaque,
+							provident accusantium rerum saepe?
+						</div>
+					</div>
+					<div className='card'>
+						<div className='text'>
+							<h2 className='title-2'>Montage Video</h2>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+							Accusantium nobis perferendis repellat. Quod consequuntur eaque
+							explicabo dignissimos reprehenderit ex, numquam molestias
+							laudantium ducimus recusandae, similique quas voluptate
+							consequatur, nulla laboriosam?
+						</div>
+					</div>
+					<div className='card'>
+						<div className='text'>
+							<h2 className='title-2'>Design</h2>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consectetur corporis quaerat odio, minus earum blanditiis
+							voluptates suscipit placeat repudiandae quod nihil quo molestiae!
+							Pariatur ratione eos, modi accusamus voluptas vel!
+						</div>
+					</div>
+					<div className='card'>
+						<div className='text'>
+							<h2 className='title-2'>Branding</h2>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consectetur corporis quaerat odio, minus earum blanditiis
+							voluptates suscipit placeat repudiandae quod nihil quo molestiae!
+							Pariatur ratione eos, modi accusamus voluptas vel!
+						</div>
+					</div>
+					<div className='card'>
+						<div className='text'>
+							<h2 className='title-2'>Audit</h2>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consectetur corporis quaerat odio, minus earum blanditiis
+							voluptates suscipit placeat repudiandae quod nihil quo molestiae!
+							Pariatur ratione eos, modi accusamus voluptas vel!
+						</div>
+					</div>
+					<div className='card'>
+						<div className='text'>
+							<h2 className='title-2'>Social Ads</h2>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consectetur corporis quaerat odio, minus earum blanditiis
+							voluptates suscipit placeat repudiandae quod nihil quo molestiae!
+							Pariatur ratione eos, modi accusamus voluptas vel!
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	)
 }
 
 export default Services
-
-

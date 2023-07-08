@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 
+import './footer.scss'
+
+
 const Footer = () => {
 return (
   <div className='footer'>
-    <h1 className='company'>SEN SOLUTION DIGITALE</h1>
+    <h1 className='company'>YAATAL DIGITAL</h1>
     <p className='copy'>Tous droits réservés &copy; {new Date().getFullYear()}</p>
     <ul className='menu'>
       <li className='link'>

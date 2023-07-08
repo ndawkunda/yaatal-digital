@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
+import './menu.scss'
+
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuToggle = () => {
@@ -10,9 +12,9 @@ const Menu = () => {
 
   return (
     <>
-      <nav className='header'>
+      <nav className='nav'>
         <div className='topbar'>
-          <h1 className='logo'>LOGO</h1>
+          <h1 className='logo'>YD</h1>
           <div className='menu-btn'>
             {menuOpen ? (
               <FaTimes onClick={menuToggle} />

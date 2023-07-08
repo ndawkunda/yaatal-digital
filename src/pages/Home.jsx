@@ -5,21 +5,23 @@ import {
   FaLongArrowAltRight,
   FaConnectdevelop,
 } from 'react-icons/fa'
-import '../styles/layouts/home.scss'
+
+import { images } from '../constants'
+import './home.scss'
 
 const Home = () => {
   return (
-    <>
-      <div className='landing'>
-        <img src='/img/landing.jpg' alt='landing background' className='bg' />
+    <div id='home'>
+      <div className='header'>
+        <img src={images.home} alt='landing background' className='bg' />
         <div className='text-container'>
-          <h1 className='title title-1'>SEN SOLUTION DIGITALE</h1>
+          <h1 className='title title-1'>YAATAL DIGITAL</h1>
           <p className='desc'>
             Nous vous accompagnons pour la création de votre site internet et le
             référencement naturel (SEO). Nous pouvons également prendre en
             charge la création de votre identité visuelle.
           </p>
-          <Link to='/services' className='rounded-plain-btn cta'>
+          <Link to='/contact' className='rounded-plain-btn cta'>
             Nous contacter <FaPhone />
           </Link>
         </div>
@@ -114,7 +116,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
