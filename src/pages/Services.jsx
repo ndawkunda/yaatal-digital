@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import {
 	FaEye,
-	FaThinkPeaks,
-	FaLongArrowAltRight,
 	FaConnectdevelop,
+	FaHornbill,
+	FaDesktop,
 } from 'react-icons/fa'
+
 
 import { images } from '../constants'
 import './services.scss'
@@ -14,8 +15,18 @@ const Services = () => {
 	return (
 		<div id='services'>
 			<div className='header'>
-				<img src={images.services} alt='header background' className='bg' />
-				<div className='text-container'>
+				<motion.img
+					whileInView={{ x: [100, 0] }}
+					transition={{ duration: 0.5 }}
+					src={images.services}
+					alt='header background'
+					className='bg'
+				/>
+				<motion.div
+					whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+					transition={{ duration: 1 }}
+					className='text-container'
+				>
 					<h1 className='title-2'>Concevoir de meilleurs solutions</h1>
 					<p className='desc'>
 						Nous vous proposons des services premium, à des prix défiant toutes
@@ -24,7 +35,7 @@ const Services = () => {
 					<a href='#main-services' className='rounded-plain-btn cta'>
 						Découvrir nos services <FaEye />
 					</a>
-				</div>
+				</motion.div>
 			</div>
 
 			<div className='main-services' id='main-services'>
@@ -40,7 +51,7 @@ const Services = () => {
 						</div>
 					</div>
 					<div className='card'>
-						<FaConnectdevelop className='icon' />
+						<FaHornbill className='icon' />
 						<div className='text'>
 							<h2 className='title-2'>Community Management</h2>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -51,7 +62,7 @@ const Services = () => {
 						</div>
 					</div>
 					<div className='card'>
-						<FaConnectdevelop className='icon' />
+						<FaDesktop className='icon' />
 						<div className='text'>
 							<h2 className='title-2'>IT Support</h2>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -125,7 +136,6 @@ const Services = () => {
 					</div>
 				</div>
 			</div>
-			
 		</div>
 	)
 }
